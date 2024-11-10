@@ -28,9 +28,6 @@ dependencies:
   blur: ^4.0.0
   flutter_animate: ^4.5.0
 
-  get: ^4.6.6
-  internet_connection_checker_plus: ^2.5.2
-
   
 
 
@@ -47,6 +44,16 @@ flutter:
   assets:
     - assets/catloading.json  
     - assets/images/
+
+    - assets/fonts/
+  fonts:
+    - family: LeagueSpartan
+      fonts:
+        - asset: assets/fonts/LeagueSpartan.ttf
+    - family: Lemon
+      fonts:
+        - asset: assets/fonts/Lemon.ttf
+
   fonts:
     - family: Lemon
       fonts:
