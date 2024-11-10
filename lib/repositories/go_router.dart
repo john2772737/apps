@@ -10,7 +10,9 @@ import '../pages/baseScreen.dart';
 
 
 final GoRouter router = GoRouter(
+  initialLocation: "/loading",
   initialLocation: "/",
+
   routes: <RouteBase>[
    GoRoute(
   name: "loading",
