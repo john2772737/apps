@@ -16,6 +16,7 @@ dependencies:
   freezed_annotation: ^2.4.4
   flutter_bloc: ^8.1.6
   lottie: ^3.1.3
+  animated_text_kit: ^4.2.1
   http: ^1.2.2
   wifi_iot: ^0.3.19+1
   open_settings: ^2.0.2
@@ -26,6 +27,7 @@ dependencies:
   wifi_info_flutter: ^2.0.2
   blur: ^4.0.0
   flutter_animate: ^4.5.0
+
   
 
 
@@ -42,6 +44,7 @@ flutter:
   assets:
     - assets/catloading.json  
     - assets/images/
+
     - assets/fonts/
   fonts:
     - family: LeagueSpartan
@@ -50,4 +53,9 @@ flutter:
     - family: Lemon
       fonts:
         - asset: assets/fonts/Lemon.ttf
+
+  fonts:
+    - family: Lemon
+      fonts:
+       - asset: assets/fonts/Lemon-Regular.ttf
 

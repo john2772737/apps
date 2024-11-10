@@ -11,7 +11,7 @@ import '../pages/uploadimage.dart';
 
 
 final GoRouter router = GoRouter(
-  initialLocation: "/loginPage",
+
   routes: <RouteBase>[
    GoRoute(
   name: "loading",
