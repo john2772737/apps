@@ -22,8 +22,13 @@ dependencies:
   quickalert: ^1.1.0
   connectivity_plus: ^6.1.0
   app_settings: ^5.1.1
+<<<<<<< HEAD
   network_info_plus: ^6.1.1
   wifi_info_flutter: ^2.0.2
+=======
+  blur: ^4.0.0
+  flutter_animate: ^4.5.0
+>>>>>>> 03c35070775796cef3b877e9a3ed8b3abb6e7780
   
 
 
@@ -38,4 +43,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/catloading.json  # Corrected asset path
+    - assets/catloading.json  
+    - assets/images/
+    - assets/fonts/
