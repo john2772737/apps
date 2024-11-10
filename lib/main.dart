@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'blocs/bloc/wifi_bloc.dart'; // Import your WifiBloc
-import 'repositories/go_router.dart'; // Assuming your GoRouter is set up here
-import 'blocs/bloc/wifi_event.dart';
+import 'repositories/go_router.dart'; // Your GoRouter setup
 
 void main() {
   runApp(
-    BlocProvider(
-      create: (context) => WifiBloc()..add(WifiEvent.status()), // Trigger event on app start
-      child: MyApp(),
-    ),
+    const MyApp(),
   );
 }
 

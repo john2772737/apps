@@ -22,6 +22,8 @@ dependencies:
   quickalert: ^1.1.0
   connectivity_plus: ^6.1.0
   app_settings: ^5.1.1
+  network_info_plus: ^6.1.1
+  wifi_info_flutter: ^2.0.2
   
 
 
