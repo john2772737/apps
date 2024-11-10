@@ -12,7 +12,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
 final GoRouter router = GoRouter(
-  initialLocation: "/loading",
+  initialLocation: "/profilePage",
   routes: <RouteBase>[
     GoRoute(
   name: "loading",
