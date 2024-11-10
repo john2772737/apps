@@ -7,10 +7,11 @@ import '../pages/loginPage.dart';
 import '../pages/editPage.dart';
 import '../pages/loadingScreen.dart';
 import '../pages/baseScreen.dart';
+import '../pages/uploadimage.dart';
 
 
 final GoRouter router = GoRouter(
-  initialLocation: "/profilePage",
+  initialLocation: "/loginPage",
   routes: <RouteBase>[
    GoRoute(
   name: "loading",
@@ -45,6 +46,11 @@ final GoRouter router = GoRouter(
       name: "profilePage",
       path: "/profilePage",
       builder: (context, state) => BaseScreen(child: Profilepage()),
+    ),
+    GoRoute(
+      name: "uploadimage",
+      path: "/uploadimage",
+      builder: (context, state) => Uploadimage(),
     ),
   ],
 );
