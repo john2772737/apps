@@ -28,8 +28,7 @@ mixin _$UserModel {
   DateTime get birthdate => throw _privateConstructorUsedError;
   String get address => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
-  @Uint8ListConverter()
-  Uint8List get imageUrl => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
 
   /// Serializes this UserModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -55,7 +54,7 @@ abstract class $UserModelCopyWith<$Res> {
       DateTime birthdate,
       String address,
       String password,
-      @Uint8ListConverter() Uint8List imageUrl});
+      String imageUrl});
 }
 
 /// @nodoc
@@ -119,7 +118,7 @@ class _$UserModelCopyWithImpl<$Res, $Val extends UserModel>
       imageUrl: null == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uint8List,
+              as String,
     ) as $Val);
   }
 }
@@ -141,7 +140,7 @@ abstract class _$$UserModelImplCopyWith<$Res>
       DateTime birthdate,
       String address,
       String password,
-      @Uint8ListConverter() Uint8List imageUrl});
+      String imageUrl});
 }
 
 /// @nodoc
@@ -203,7 +202,7 @@ class __$$UserModelImplCopyWithImpl<$Res>
       imageUrl: null == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as Uint8List,
+              as String,
     ));
   }
 }
@@ -220,7 +219,7 @@ class _$UserModelImpl implements _UserModel {
       required this.birthdate,
       required this.address,
       required this.password,
-      @Uint8ListConverter() required this.imageUrl});
+      required this.imageUrl});
 
   factory _$UserModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$UserModelImplFromJson(json);
@@ -242,8 +241,7 @@ class _$UserModelImpl implements _UserModel {
   @override
   final String password;
   @override
-  @Uint8ListConverter()
-  final Uint8List imageUrl;
+  final String imageUrl;
 
   @override
   String toString() {
@@ -267,22 +265,14 @@ class _$UserModelImpl implements _UserModel {
             (identical(other.address, address) || other.address == address) &&
             (identical(other.password, password) ||
                 other.password == password) &&
-            const DeepCollectionEquality().equals(other.imageUrl, imageUrl));
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      fullName,
-      email,
-      phoneNo,
-      jobPosition,
-      school,
-      birthdate,
-      address,
-      password,
-      const DeepCollectionEquality().hash(imageUrl));
+  int get hashCode => Object.hash(runtimeType, fullName, email, phoneNo,
+      jobPosition, school, birthdate, address, password, imageUrl);
 
   /// Create a copy of UserModel
   /// with the given fields replaced by the non-null parameter values.
@@ -302,16 +292,15 @@ class _$UserModelImpl implements _UserModel {
 
 abstract class _UserModel implements UserModel {
   factory _UserModel(
-          {required final String fullName,
-          required final String email,
-          required final String phoneNo,
-          required final String jobPosition,
-          required final String school,
-          required final DateTime birthdate,
-          required final String address,
-          required final String password,
-          @Uint8ListConverter() required final Uint8List imageUrl}) =
-      _$UserModelImpl;
+      {required final String fullName,
+      required final String email,
+      required final String phoneNo,
+      required final String jobPosition,
+      required final String school,
+      required final DateTime birthdate,
+      required final String address,
+      required final String password,
+      required final String imageUrl}) = _$UserModelImpl;
 
   factory _UserModel.fromJson(Map<String, dynamic> json) =
       _$UserModelImpl.fromJson;
@@ -333,8 +322,7 @@ abstract class _UserModel implements UserModel {
   @override
   String get password;
   @override
-  @Uint8ListConverter()
-  Uint8List get imageUrl;
+  String get imageUrl;
 
   /// Create a copy of UserModel
   /// with the given fields replaced by the non-null parameter values.

@@ -46,7 +46,7 @@ final GoRouter router = GoRouter(
     final userId = state.extra as int?;
 
     return BaseScreen(
-      child: Profilepage(userId: userId), // Pass the userId to ProfilePage
+      child: ProfilePage(userId: userId), // Pass the userId to ProfilePage
     );
   },
 ),
