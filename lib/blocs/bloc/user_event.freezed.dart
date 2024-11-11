@@ -20,18 +20,21 @@ mixin _$UserEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) submit,
     required TResult Function() logout,
+    required TResult Function(int userId) fetchUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? submit,
     TResult? Function()? logout,
+    TResult? Function(int userId)? fetchUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? submit,
     TResult Function()? logout,
+    TResult Function(int userId)? fetchUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,21 @@ mixin _$UserEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(Submit value) submit,
     required TResult Function(Logout value) logout,
+    required TResult Function(FetchUser value) fetchUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Submit value)? submit,
     TResult? Function(Logout value)? logout,
+    TResult? Function(FetchUser value)? fetchUser,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Submit value)? submit,
     TResult Function(Logout value)? logout,
+    TResult Function(FetchUser value)? fetchUser,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +161,7 @@ class _$SubmitImpl implements Submit {
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) submit,
     required TResult Function() logout,
+    required TResult Function(int userId) fetchUser,
   }) {
     return submit(email, password);
   }
@@ -164,6 +171,7 @@ class _$SubmitImpl implements Submit {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? submit,
     TResult? Function()? logout,
+    TResult? Function(int userId)? fetchUser,
   }) {
     return submit?.call(email, password);
   }
@@ -173,6 +181,7 @@ class _$SubmitImpl implements Submit {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? submit,
     TResult Function()? logout,
+    TResult Function(int userId)? fetchUser,
     required TResult orElse(),
   }) {
     if (submit != null) {
@@ -186,6 +195,7 @@ class _$SubmitImpl implements Submit {
   TResult map<TResult extends Object?>({
     required TResult Function(Submit value) submit,
     required TResult Function(Logout value) logout,
+    required TResult Function(FetchUser value) fetchUser,
   }) {
     return submit(this);
   }
@@ -195,6 +205,7 @@ class _$SubmitImpl implements Submit {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Submit value)? submit,
     TResult? Function(Logout value)? logout,
+    TResult? Function(FetchUser value)? fetchUser,
   }) {
     return submit?.call(this);
   }
@@ -204,6 +215,7 @@ class _$SubmitImpl implements Submit {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Submit value)? submit,
     TResult Function(Logout value)? logout,
+    TResult Function(FetchUser value)? fetchUser,
     required TResult orElse(),
   }) {
     if (submit != null) {
@@ -271,6 +283,7 @@ class _$LogoutImpl implements Logout {
   TResult when<TResult extends Object?>({
     required TResult Function(String email, String password) submit,
     required TResult Function() logout,
+    required TResult Function(int userId) fetchUser,
   }) {
     return logout();
   }
@@ -280,6 +293,7 @@ class _$LogoutImpl implements Logout {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String email, String password)? submit,
     TResult? Function()? logout,
+    TResult? Function(int userId)? fetchUser,
   }) {
     return logout?.call();
   }
@@ -289,6 +303,7 @@ class _$LogoutImpl implements Logout {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String email, String password)? submit,
     TResult Function()? logout,
+    TResult Function(int userId)? fetchUser,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -302,6 +317,7 @@ class _$LogoutImpl implements Logout {
   TResult map<TResult extends Object?>({
     required TResult Function(Submit value) submit,
     required TResult Function(Logout value) logout,
+    required TResult Function(FetchUser value) fetchUser,
   }) {
     return logout(this);
   }
@@ -311,6 +327,7 @@ class _$LogoutImpl implements Logout {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Submit value)? submit,
     TResult? Function(Logout value)? logout,
+    TResult? Function(FetchUser value)? fetchUser,
   }) {
     return logout?.call(this);
   }
@@ -320,6 +337,7 @@ class _$LogoutImpl implements Logout {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Submit value)? submit,
     TResult Function(Logout value)? logout,
+    TResult Function(FetchUser value)? fetchUser,
     required TResult orElse(),
   }) {
     if (logout != null) {
@@ -331,4 +349,150 @@ class _$LogoutImpl implements Logout {
 
 abstract class Logout implements UserEvent {
   const factory Logout() = _$LogoutImpl;
+}
+
+/// @nodoc
+abstract class _$$FetchUserImplCopyWith<$Res> {
+  factory _$$FetchUserImplCopyWith(
+          _$FetchUserImpl value, $Res Function(_$FetchUserImpl) then) =
+      __$$FetchUserImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int userId});
+}
+
+/// @nodoc
+class __$$FetchUserImplCopyWithImpl<$Res>
+    extends _$UserEventCopyWithImpl<$Res, _$FetchUserImpl>
+    implements _$$FetchUserImplCopyWith<$Res> {
+  __$$FetchUserImplCopyWithImpl(
+      _$FetchUserImpl _value, $Res Function(_$FetchUserImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userId = null,
+  }) {
+    return _then(_$FetchUserImpl(
+      userId: null == userId
+          ? _value.userId
+          : userId // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FetchUserImpl implements FetchUser {
+  const _$FetchUserImpl({required this.userId});
+
+  @override
+  final int userId;
+
+  @override
+  String toString() {
+    return 'UserEvent.fetchUser(userId: $userId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FetchUserImpl &&
+            (identical(other.userId, userId) || other.userId == userId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userId);
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FetchUserImplCopyWith<_$FetchUserImpl> get copyWith =>
+      __$$FetchUserImplCopyWithImpl<_$FetchUserImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String email, String password) submit,
+    required TResult Function() logout,
+    required TResult Function(int userId) fetchUser,
+  }) {
+    return fetchUser(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String email, String password)? submit,
+    TResult? Function()? logout,
+    TResult? Function(int userId)? fetchUser,
+  }) {
+    return fetchUser?.call(userId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String email, String password)? submit,
+    TResult Function()? logout,
+    TResult Function(int userId)? fetchUser,
+    required TResult orElse(),
+  }) {
+    if (fetchUser != null) {
+      return fetchUser(userId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Submit value) submit,
+    required TResult Function(Logout value) logout,
+    required TResult Function(FetchUser value) fetchUser,
+  }) {
+    return fetchUser(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(Submit value)? submit,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(FetchUser value)? fetchUser,
+  }) {
+    return fetchUser?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Submit value)? submit,
+    TResult Function(Logout value)? logout,
+    TResult Function(FetchUser value)? fetchUser,
+    required TResult orElse(),
+  }) {
+    if (fetchUser != null) {
+      return fetchUser(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FetchUser implements UserEvent {
+  const factory FetchUser({required final int userId}) = _$FetchUserImpl;
+
+  int get userId;
+
+  /// Create a copy of UserEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FetchUserImplCopyWith<_$FetchUserImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -16,7 +16,7 @@ _$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
       birthdate: DateTime.parse(json['birthdate'] as String),
       address: json['address'] as String,
       password: json['password'] as String,
-      imageUrl: json['imageUrl'] as String,
+      imageUrl: const Uint8ListConverter().fromJson(json['imageUrl'] as String),
     );
 
 Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
@@ -29,5 +29,5 @@ Map<String, dynamic> _$$UserModelImplToJson(_$UserModelImpl instance) =>
       'birthdate': instance.birthdate.toIso8601String(),
       'address': instance.address,
       'password': instance.password,
-      'imageUrl': instance.imageUrl,
+      'imageUrl': const Uint8ListConverter().toJson(instance.imageUrl),
     };

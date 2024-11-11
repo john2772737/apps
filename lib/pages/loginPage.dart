@@ -146,6 +146,8 @@ class LoginPage extends StatelessWidget {
                                 },
                                 loading: () {},
                                 initial: () {},
+                                userFetched: (_) {},
+                                
                               );
                             },
                             builder: (context, state) {

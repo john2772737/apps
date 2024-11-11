@@ -28,6 +28,7 @@ dependencies:
   blur: ^4.0.0
   flutter_animate: ^4.5.0
   sqflite: ^2.4.1
+  intl: ^0.19.0
 
   
 

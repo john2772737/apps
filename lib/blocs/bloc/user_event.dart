@@ -11,4 +11,5 @@ class UserEvent with _$UserEvent {
     }
   ) = Submit;
   const factory UserEvent.logout() = Logout;
+  const factory UserEvent.fetchUser({required int userId}) = FetchUser;
 }
