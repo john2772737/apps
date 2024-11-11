@@ -39,10 +39,18 @@ final GoRouter router = GoRouter(
       builder: (context, state) => Registerpage(),
     ),
     GoRoute(
-      name: "profilePage",
-      path: "/profilePage",
-      builder: (context, state) => BaseScreen(child: Profilepage()),
-    ),
+  name: "profilePage",
+  path: "/profilePage",
+  builder: (context, state) {
+    // Retrieve the userId from the extra parameter
+    final userId = state.extra as int?;
+
+    return BaseScreen(
+      child: Profilepage(userId: userId), // Pass the userId to ProfilePage
+    );
+  },
+),
+
     GoRoute(
       name: "uploadimage",
       path: "/uploadimage",

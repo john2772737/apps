@@ -5,7 +5,8 @@ import '../components/customHighlight.dart';
 import 'dart:ui';  
 
 class Profilepage extends StatelessWidget {
-  const Profilepage({super.key});
+  
+  const Profilepage({super.key,final int? userId});
 
   @override
   Widget build(BuildContext context) {

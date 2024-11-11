@@ -6,28 +6,26 @@ import 'user_state.dart';
 class UserBloc extends Bloc<UserEvent, UserState> {
   final DatabaseHelper _databaseHelper;
 
-  UserBloc(this._databaseHelper) : super(Initial());
-
-  @override
-  Stream<UserState> mapEventToState(UserEvent event) async* {
-    yield* event.map(
-      submit: (e) async* {
-        try {
-          final userId = await _databaseHelper.validateUser(e.email, e.password);
-          if (userId!=null) {
-            yield const Success();
-            
-          } else {
-            yield const Error('Invalid email or password');
-          }
-        } catch (e) {
-          yield Error('Login failed: ${e.toString()}');
+  // Constructor
+  UserBloc(this._databaseHelper) : super(Initial()) {
+    // Event handler for the Submit event
+    on<Submit>((event, emit) async {
+      try {
+        // Validate user credentials
+        final userId = await _databaseHelper.validateUser(event.email, event.password);
+        if (userId != null) {
+          emit(Success(userId)); // Emit Success state on valid login
+        } else {
+          emit(Error('Invalid email or password')); // Emit Error state for invalid credentials
         }
-      },
-      logout: (e) async* {
-        // Handle logout logic here
-        yield const Initial(); // You can yield a different state for logout
-      },
-    );
+      } catch (e) {
+        emit(Error('Login failed: ${e.toString()}')); // Emit Error state if an exception occurs
+      }
+    });
+
+    // Event handler for the Logout event
+    on<Logout>((event, emit) {
+      emit(Initial()); // Reset state to Initial on logout
+    });
   }
 }
