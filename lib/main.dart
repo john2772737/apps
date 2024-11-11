@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'repositories/go_router.dart'; // Your GoRouter setup
-
+import 'package:go_router/go_router.dart';
 void main() {
   runApp(
     const MyApp(),

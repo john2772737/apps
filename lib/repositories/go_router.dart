@@ -11,17 +11,13 @@ import '../pages/uploadimage.dart';
 
 
 final GoRouter router = GoRouter(
-
+  initialLocation: "/loginPage",
   routes: <RouteBase>[
    GoRoute(
   name: "loading",
   path: "/loading",
   builder: (context, state) {
-    // Simulate a delay for the loading screen
-    Future.delayed(Duration(seconds: 3), () {
-      // You can navigate to another route after the delay
-      context.go("/loginPage");
-    });
+    
     return LoadingScreen();
   },
 ),
