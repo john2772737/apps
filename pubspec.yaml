@@ -53,9 +53,6 @@ flutter:
     - family: Lemon
       fonts:
         - asset: assets/fonts/Lemon.ttf
+        - asset: assets/fonts/Lemon-Regular.ttf
 
-  fonts:
-    - family: Lemon
-      fonts:
-       - asset: assets/fonts/Lemon-Regular.ttf
 
